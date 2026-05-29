@@ -1,12 +1,12 @@
-package src;
+package menus;
 import java.util.Scanner;
-
-public class Menus {
+import validaciones.Validaciones;
+public class Menu {
     Scanner sc = new Scanner(System.in);
     Validaciones v = new Validaciones();
-    boolean seguir = true;
     public void menupricipal(){
-        Menus m = new Menus();
+        boolean seguir = true;
+        Menu m = new Menu();
         int opt = 0;
         while (seguir) {
             System.out.println("\n--- SISTEMA DE GESTIÓN DE PRÉSTAMOS SAN JUAN DE DIOS ---");
@@ -38,10 +38,11 @@ public class Menus {
         }
     }
     private void Submenu(String facultad) {
-        Menus m = new Menus();
+        boolean seguir2 = true;
+        Menu m = new Menu();
         int opcion = 0;
-        while (seguir) {
-            System.out.println("\n--- SUBMENÚ DE " + facultad.toUpperCase() + " ---");
+        while (seguir2) {
+            System.out.println("\n--- MENÚ DE " + facultad.toUpperCase() + " ---");
             System.out.println("1. Registrar préstamo"); 
             System.out.println("2. Modificar préstamo"); 
             System.out.println("3. Devolución de equipo"); 
@@ -66,7 +67,7 @@ public class Menus {
                     break;
                 case 5:
                     System.out.println("Volviendo...");
-                    seguir = false;
+                    seguir2 = false;
                     break;
                 default:
                     System.out.println("Opción incorrecta.");

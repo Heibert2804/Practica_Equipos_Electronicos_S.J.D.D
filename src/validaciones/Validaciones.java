@@ -1,4 +1,4 @@
-package src;
+package validaciones;
 import java.util.Scanner;
 
 public class Validaciones {
