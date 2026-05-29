@@ -1,14 +1,18 @@
 package principal;
 
-import menus.Menu;
+import modelos.EstudianteIngenieria;
+import servicios.PruebaIng;
 
 public class Main {
-
     public static void main(String[] args) {
-        System.out.println("Iniciando SISTEMA de prestamos");
-        Menu menu = new Menu();
-        menu.menupricipal();
 
+        PruebaIng prueba = new PruebaIng();
+        EstudianteIngenieria estudiante = prueba.crearEstudiante();
+
+        System.out.println("\n===== ESTUDIANTE CREADO =====");
+
+        System.out.println("Nombre: " + estudiante.getNombre());
+
+        System.out.println("Promedio: " + estudiante.getPromedio());
     }
-
 }
