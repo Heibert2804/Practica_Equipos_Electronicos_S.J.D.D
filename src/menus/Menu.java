@@ -39,7 +39,6 @@ public class Menu {
     }
     private void Submenu(String facultad) {
         boolean seguir2 = true;
-        Menu m = new Menu();
         int opcion = 0;
         while (seguir2) {
             System.out.println("\n--- MENÚ DE " + facultad.toUpperCase() + " ---");
